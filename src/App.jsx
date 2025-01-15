@@ -8,7 +8,11 @@ function App() {
   const router = createBrowserRouter([
     {
       path: "/dashboard",
-      element: <Dashboard />,
+      element: (
+        <ProtectedRoute>
+          <Dashboard />
+        </ProtectedRoute>
+      ),
     },
     {
       path: "/",
